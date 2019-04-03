@@ -24,7 +24,7 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
-      <scope>test</scope>
+      <!--<scope>test</scope>-->      <!--添加scope则只在test文件夹下有效-->
     </dependency>
 
       <dependency>
@@ -38,6 +38,13 @@
       <artifactId>commons-httpclient</artifactId>
       <version>3.0.1</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.4</version>
+    </dependency>
+
   </dependencies>
 
   <build>
