@@ -20,7 +20,7 @@ public class UtilTest {
     public void str(){
         String a ="";
         Boolean b =  StringUtils.equals("",a);
-        System.out.println(b);
+        System.out.println(b); 
     }
 }
 
