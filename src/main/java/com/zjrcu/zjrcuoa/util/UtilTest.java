@@ -28,7 +28,7 @@ public class UtilTest {
     public void stringEscapeUtilsTest() {
 
             System.out.println("转义HTML,注意汉字:"+StringEscapeUtils.escapeHtml4("<font>chen磊  xing</font>"));    //转义HTML,注意汉字
-            System.out.println("反转义HTML:"+StringEscapeUtils.unescapeHtml4("&lt;font&gt;chen磊  xing&lt;/font&gt;"));  //反转义HTML
+            System.out.println("反转义HTML:"+StringEscapeUtils.unescapeHtml4("&lt;font&gt;chen磊&nbsp; xing&lt;/font&gt;"));  //反转义HTML
 
             System.out.println("转成Unicode编码："+StringEscapeUtils.escapeJava("陈磊兴"));     //转义成Unicode编码
 

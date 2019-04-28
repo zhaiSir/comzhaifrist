@@ -23,3 +23,15 @@ $(document).ready(function(){
         });
     });
 });
+
+
+
+function clip() {
+    var input = document.createElement('input');
+    document.body.appendChild(input);
+    input.setAttribute('value', '听说你想复制我');
+    input.select();
+    document.execCommand("copy");
+    input.remove();
+    alert("成功复制到剪贴板");
+}
