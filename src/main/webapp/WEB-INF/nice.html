@@ -7,6 +7,33 @@
 
 
 <body>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="../js/bringins.js"></script>
+<div id="sampledata" class="bringins-content" style="color: white">
+    <h2>jQuery</h2>
+    <p>JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript language specification. Alongside HTML and CSS, it is one of the three core technologies of World Wide Web content production; the majority of websites employ it and it is supported by all modern Web browsers without plug-ins. JavaScript is prototype-based with first-class functions, making it a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles. It has an API for working with text, arrays, dates and regular expressions, but does not include any I/O, such as networking, storage, or graphics facilities, relying for these upon the host environment in which it is embedded.
+        <br><br>
+        Despite some naming, syntactic, and standard library similarities, JavaScript and Java are otherwise unrelated and have very different semantics. The syntax of JavaScript is actually derived from C, while the semantics and design are influenced by the Self and Scheme programming languages.
+        <br><br>
+        JavaScript is also used in environments that are not Web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side Web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation. It is also used in game development, the creation of desktop and mobile applications, and server-side network programming with runtime environments such as Node.js</p>
+</div>
+<button id="btn">特效弹窗bringins</button>
+<script>
+$(document).ready(function() {
+$('#btn').click(function(){
+$('#sampledata').bringins({
+"position":"center",    //animation of the bringins page
+"color":"grey",    //background color of the page
+"closeButton":"red",  //color of the close button
+"width":"30%", //width of the bringins page
+"margin":100,   //margin of the content inside the page
+"zIndex":99999    //z-index of the page
+});
+});
+});
+</script>
+
+
 <!--磁力线放射-->
 <script>
     !function(){
