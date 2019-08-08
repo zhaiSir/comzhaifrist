@@ -35,3 +35,4 @@ function clip() {
     input.remove();
     alert("成功复制到剪贴板");
 }
+

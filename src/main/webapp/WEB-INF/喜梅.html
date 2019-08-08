@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+
+/*window.onload=function(){
+
+}*/
+
+function all(){
+    $("#tdz1").val(Number($("#td13").val())+Number($("#td23").val())+Number($("#td33").val()));
+    $("#tdz2").val(Number($("#td15").val())+Number($("#td25").val())+Number($("#td35").val()));
+    $("#tdz3").val( parseInt($("#td17").val())+parseInt($("#td27").val())+parseInt($("#td37").val()));
+}
+
+function addOneCar1(){
+    $("#td13").val(parseInt($("#td13").val())+1);
+    $("#td15").val(parseInt($("#td13").val())*parseInt($("#td14").val()));
+    $("#td17").val(parseInt($("#td13").val())*parseInt($("#td14").val())*3);
+    all();
+}
+
+function addOneCar2(){
+    $("#td23").val(parseInt($("#td23").val())+1);
+    $("#td25").val(parseInt($("#td23").val())*parseInt($("#td24").val()));
+    $("#td27").val(parseInt($("#td23").val())*parseInt($("#td24").val())*3);
+    all();
+}
+
+function addOneCar3(){
+    $("#td33").val(parseInt($("#td33").val())+1);
+    $("#td35").val(parseInt($("#td33").val())*parseInt($("#td34").val()));
+    $("#td37").val(parseInt($("#td33").val())*parseInt($("#td34").val())*3);
+    all();
+}
+
+</script>
+
+<body>
+<h4>喜梅厂砂石统计:</h4>
+<table border="1">
+    <tr>
+        <td>姓名</td>
+        <td>点击加1</td>
+        <td>总车次</td>
+        <td>单车次吨位</td>
+        <td>总车次吨位</td>
+        <td>单价</td>
+        <td>总额</td>
+    </tr>
+    <tr>
+        <td>翟银鱼</td>
+        <td><button id="button1" onclick="addOneCar1()">点击车次加1</button></td>
+        <td ><input id='td13' value="0">车</input></td>
+        <td><input id='td14' value="30">吨/车</input></td>
+        <td><input id='td15' value="0">吨</input></td>
+        <td>3元/吨</td>
+        <td><input id='td17' value="0">元</input></td>
+    </tr>
+    <tr>
+        <td>翟武尔</td>
+        <td><button id="button2" onclick="addOneCar2()">点击车次加1</button></td>
+        <td ><input id='td23' value="0">车</input></td>
+        <td><input id='td24' value="25">吨/车</input></td>
+        <td><input id='td25' value="0">吨</input></td>
+        <td>3元/吨</td>
+        <td><input id='td27' value="0">元</input></td>
+    </tr>
+    <tr>
+        <td>六尔</td>
+        <td><button id="button3" onclick="addOneCar3()">点击车次加1</button></td>
+        <td ><input id='td33' value="0">车</input></td>
+        <td><input id='td34' value="18">吨/车</input></td>
+        <td><input id='td35' value="0">吨</input></td>
+        <td>3元/吨</td>
+        <td><input id='td37' value="0">元</input></td>
+    </tr>
+
+   <tr style='border: 0px'>
+       <td  style='border: 0px' colspan="3">
+       总计:
+       <input style='border: 0px ;width:50px'  id='tdz1' value="0">车</input>
+       <input  style='border: 0px ;width:50px' id='tdz2' value="0">吨</input>
+       <input style='border: 0px ;width:50px' id='tdz3'  value="0">元</input>
+   </td>
+   </tr>
+
+
+</table>
+
+
+</body>
+</html>

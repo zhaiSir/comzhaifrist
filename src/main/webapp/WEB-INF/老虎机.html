@@ -28,7 +28,7 @@
         #random_12{ left:0; top:446px;}
         #random_13{ left:0; top:298px;}
         #random_14{ left:0; top:148px;}
-        #random_box li.random_current{border:1px solid red;}
+        #random_box li.random_current{border:3px solid red;}
     </style>
 </head>
 <body>
@@ -39,19 +39,21 @@
             <li id="random_2"><img src="../img/img2.jpg" /></li>
             <li id="random_3"><img src="../img/img3.jpg" /></li>
             <li id="random_4"><img src="../img/img4.jpg" /></li>
-            <li id="random_5">5</li>
-            <li id="random_6">6</li>
-            <li id="random_7">7</li>
-            <li id="random_8">8</li>
-            <li id="random_9">9</li>
-            <li id="random_10">10</li>
-            <li id="random_11">11</li>
-            <li id="random_12">12</li>
-            <li id="random_13">13</li>
-            <li id="random_14">14</li>
+            <li id="random_5"><img src="../img/hbb1.jpg" /></li>
+            <li id="random_6"><img src="../img/hbb2.jpg" /></li>
+            <li id="random_7"><img src="../img/hbb3.jpg" /></li>
+            <li id="random_8"><img src="../img/hbb4.jpg" /></li>
+            <li id="random_9"><img src="../img/hbb1.jpg" /></li>
+            <li id="random_10"><img src="../img/hbb2.jpg" /></li>
+            <li id="random_11"><img src="../img/hbb3.jpg" /></li>
+            <li id="random_12"><img src="../img/hbb4.jpg" /></li>
+            <li id="random_13"><img src="../img/hbb1.jpg" /></li>
+            <li id="random_14"><img src="../img/hbb2.jpg" /></li>
         </ul>
         <b class="ok" onClick="StartGame()">抽奖</b>
     </div>
+</div >
+<div style="visibility:hidden;font-size: 40px;color:red" id="who">恭喜韩冰冰抽中大奖！
 </div>
 <script>
     var index=1,           //当前亮区位置
@@ -112,6 +114,7 @@
         if(flag==true && index==parseInt(random_num)){
             quick=0;
             clearInterval(Time);
+            $("#who").css("visibility","");
             $(".ok").css({"pointer-events":"all"});
         }
         $("#random_"+index).addClass('random_current'); //设置当前选中样式

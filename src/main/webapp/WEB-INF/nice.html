@@ -7,6 +7,9 @@
 
 
 <body>
+
+
+<!--导入jq和bringins.js-->
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript" src="../js/bringins.js"></script>
 <div id="sampledata" class="bringins-content" style="color: white">
@@ -22,17 +25,43 @@
 $(document).ready(function() {
 $('#btn').click(function(){
 $('#sampledata').bringins({
-"position":"center",    //animation of the bringins page
+"position":"right",    //animation of the bringins page
 "color":"grey",    //background color of the page
-"closeButton":"red",  //color of the close button
+"closeButton":"white",  //color of the close button
 "width":"30%", //width of the bringins page
 "margin":100,   //margin of the content inside the page
-"zIndex":99999    //z-index of the page
+"zIndex":999   //z-index of the page
 });
 });
 });
 </script>
 
+<!--引入js-->
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@4"></script>
+<button id="popper">popper title</button>
+
+<script>
+
+tippy('#popper', {
+    theme: 'light-border', // or 'light-border', 'google',‘dark’ ...主题
+    content: '<strong>Bolded <span style="color: aqua;">content</span></strong><strong>Bolded content👎👍❤😂🎉</strong>!',  //可以写入html
+    placement: 'bottom', // or 'left', 'right', ...位置
+   // arrow: true,    //是否加箭头
+    animation: 'fade', // or 'shift-toward', 'fade', ...动画效果
+    delay: 0, //延迟
+});
+
+</script>
+
+<!--<script src="https://cdn.jsdelivr.net/npm/planck-js@0.2/dist/planck-with-testbed.js"></script>
+<script>
+    planck.testbed(function(testbed) {
+        var world = planck.World();
+        // rest of your code
+        return world; // make sure you return the world
+    });
+</script>-->
 
 <!--磁力线放射-->
 <script>
