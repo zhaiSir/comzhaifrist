@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/main/webapp/js/PhotoClip" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/main/webapp/js/PhotoClip.js" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/main/webapp/js/iscroll" vcs="Git" />
   </component>
 </project>

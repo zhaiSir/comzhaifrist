@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pictrue</title>
+</head>
+<style>
+    #clipArea {
+        float: left;
+        margin-top:20px;
+        margin-bottom: 30px;
+        height: 300px;
+        width:300px;
+    }
+    #view {
+        margin-left: 100px;
+        margin-top:80px;
+        float: left;
+        width: 212px;
+        height: 160px;
+        background-color: #666;
+    }
+    #view2 {
+        margin-left: 100px;
+        margin-top:80px;
+        float: left;
+        width: 212px;
+        height: 160px;
+        background-color: #666;
+    }
+    .button{
+        width: 400px;
+    }
+</style>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="js/PhotoClip/demo/js/iscroll-zoom-min.js"></script>  <!--实现图片的移动-->
+<script src="js/PhotoClip/demo/js/hammer.min.js"></script>
+<script src="js/PhotoClip/demo/js/lrz.all.bundle.js"></script>
+<script src="js/PhotoClip/demo/js/PhotoClip.js"></script>  <!--实现图片的剪裁-->
+
+<body>
+<div id="clipArea"></div>
+<div id="view"></div>  <!---剪裁后预览-->
+<div id="view2"></div>
+<div class="button">
+    <input type="file" id="file">
+    <button id="clipBtn">截取</button>
+</div>
+</body>
+
+<script>
+    var pc = new PhotoClip('#clipArea', {
+        size: [212, 160],  //剪裁框的height，width
+        outputSize: [0, 0],  //剪裁完成的图片height，width
+        file: "#file",     //文件上传框ID
+        view: "#view",     //预览div的ID
+        ok: "#clipBtn",    //剪裁开始按钮ID
+        outputType:'png', //指定输出图片的类型，可选 "jpg" 和 "png" 两种种类型，默认为 "jpg"。
+        //img: 'img/mm.jpg',
+        loadStart: function() {
+            console.log('开始读取照片');
+        },
+        loadComplete: function() {
+            console.log('照片读取完成');
+        },
+        done: function(dataURL) {
+            console.log(dataURL);   //剪裁完成后返回的base64.可以直接上传至服务器。
+            var img = '<img style="width: 212px;height: 160px " src="'+dataURL+'">';
+            $('#view2').html(img);
+            /*$target.attr('view2', URL.createObjectURL(dataURL));*/
+          /*  {{url('DataPhoto')}}*/
+           /* $.ajax({
+                type: "POST",
+                url: '',
+                dataType: 'json',
+                data: { img: dataURL, _token: "{{csrf_token()}}"},
+                success: function(msg) {
+                    if(msg.state == 1){
+                        alert(msg.msg);
+                    }else{
+                        alert(msg.msg);
+                    }
+                }
+            });*/
+        },
+        fail: function(msg) {
+            alert(msg);
+        }
+    });
+
+
+</script>
+</html>
