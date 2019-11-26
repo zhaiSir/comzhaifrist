@@ -3,7 +3,7 @@ $("#id").click(function(){
 
     $("#id").css({"pointer-events":"none"});
 
-});
+}); 
 
 //判断是否只选中了一个，如果只有一个就赋给对象
 function isOnlyOne(){
